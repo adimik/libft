@@ -10,18 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *str, int c)
+char	*strchr(const char *str, int c)
 {
-    char *p;
+	char	*p;
 
-    p = str;
-    while(1)
-    {
-        if(*p == (char)c)
-            return((char *)p);
-        if(*p == '\0')
-            break;
-        p++;
-    }
-    return(NULL);
+	p = str;
+	while (1)
+	{
+		if (*p == (char)c)
+			return ((char *)p);
+		if (*p == '\0')
+			break ;
+		p++;
+	}
+	return (NULL);
 }

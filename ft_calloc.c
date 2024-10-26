@@ -10,17 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void* calloc(size_t num_elements, size_t size_of_element)
+void	*calloc(size_t num_elements, size_t size_of_element)
 {
-    unsigned char *arr;
-    size_t i;
+	unsigned char	*arr;
+	size_t			i;
 
-    i = 0;
-    arr = malloc(num_elements * size_of_element);
-    while(i < (num_elements * size_of_element))
-    {
-        arr[i] = 0;
-        i++;
-    }
-    return(void *)(arr);
+	i = 0;
+	arr = malloc(num_elements * size_of_element);
+	while (i < (num_elements * size_of_element))
+	{
+		arr[i] = 0;
+		i++;
+	}
+	return ((void *)(arr));
 }

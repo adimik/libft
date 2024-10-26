@@ -10,24 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strnstr(const char *haystack, const char *needle, size_t len)
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t  i, j;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    while(i < len && haystack[i] != '\0')
-    {
-        if(needle[0] == haystack[i])
-        {
-            j = 0;
-            while(needle[j] != '\0' && needle[j] == haystack[i + j] && i + j < len)
-            {
-                j++;
-            }
-            if (needle[j] == '\0')
-                return ((char *)&haystack[i]);
-        }
-        i++;
-    }
-    return(NULL);
+	i = 0;
+	while (i < len && haystack[i] != '\0')
+	{
+		if (needle[0] == haystack[i])
+		{
+			j = 0;
+			while (needle[j] != '\0' && needle[j] == haystack[i + j] && i
+				+ j < len)
+			{
+				j++;
+			}
+			if (needle[j] == '\0')
+				return ((char *)&haystack[i]);
+		}
+		i++;
+	}
+	return (NULL);
 }

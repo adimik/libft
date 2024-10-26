@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void bzero(void *s, size_t n)
+void	bzero(void *s, size_t n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(n > i)
-    {
-        ((char *)s)[i] = '\0';
-        i++;
-    }
+	i = 0;
+	while (n > i)
+	{
+		((char *)s)[i] = '\0';
+		i++;
+	}
 }

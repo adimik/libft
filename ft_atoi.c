@@ -10,24 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int atoi(const char *str)
+int	atoi(const char *str)
 {
-    int i, num, sign;
+	int	i;
+	int	num;
+	int	sign;
 
-    i = 0;
-    num = 0;
-    sign = 1;
-    while(str[i] == 32 || str[i] == 9)
-    {
-        i++;
-    }
-    while(str[i] == '-' || str[i] == '+')
-    {
-        if(str[i] == '-')
-            sign *= -1;
-        i++; 
-    }
-    while(str[i] >= '0' && str[i] <= '9')
-        num = num * 10 + (str[i++] - '0');
-    return(num * sign);
+	i = 0;
+	num = 0;
+	sign = 1;
+	while (str[i] == 32 || str[i] == 9)
+	{
+		i++;
+	}
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+		num = num * 10 + (str[i++] - '0');
+	return (num * sign);
 }

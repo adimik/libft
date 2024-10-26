@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int toupper(int c)
+int	toupper(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        return (c + 32);
-    else
-        return (c);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	else
+		return (c);
 }

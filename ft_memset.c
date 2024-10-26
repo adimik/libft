@@ -10,17 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memset(void *ptr, int value, size_t num)
+void	*memset(void *ptr, int value, size_t num)
 {
-    unsigned char *p;
-    size_t i;
+	unsigned char	*p;
+	size_t			i;
 
-    i = 0;
-    p = ptr;
-    while (i < num)
-    {
-        p[i] = (unsigned char)value;
-        i++;
-    }
-    return(ptr);
+	i = 0;
+	p = ptr;
+	while (i < num)
+	{
+		p[i] = (unsigned char)value;
+		i++;
+	}
+	return (ptr);
 }

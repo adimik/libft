@@ -10,23 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strrchr(const char *str, int c)
+char	*strrchr(const char *str, int c)
 {
-    char *i;
-    char *last;
+	char	*i;
+	char	*last;
 
-    i = str;
-    last = NULL;
-    while(1)
-    {
-        if(*i == (char)c)
-            last = i;
-        if(*i == '\0')
-            break;
-        i++;
-    }
-    if (last != NULL)
-        return(last);
-    else
-        return(NULL);
+	i = str;
+	last = NULL;
+	while (1)
+	{
+		if (*i == (char)c)
+			last = i;
+		if (*i == '\0')
+			break ;
+		i++;
+	}
+	if (last != NULL)
+		return (last);
+	else
+		return (NULL);
 }

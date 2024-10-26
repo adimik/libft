@@ -10,20 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memcpy(void *dest_str, const void * src_str, size_t n)
+void	*memcpy(void *dest_str, const void *src_str, size_t n)
 {
-    unsigned const char *s;
-    unsigned char *d;
-    int i;
+	unsigned const char	*s;
+	unsigned char		*d;
+	int					i;
 
-    i = 0;
-    s = src_str;
-    d = dest_str;
-
-    while(i < n)
-    {
-        d[i] = s[i];
-        i++;
-    }
-    return(dest_str);
+	i = 0;
+	s = src_str;
+	d = dest_str;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest_str);
 }
