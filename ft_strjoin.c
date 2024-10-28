@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 20:17:43 by adimik            #+#    #+#             */
-/*   Updated: 2024/10/28 15:01:57 by didimitr         ###   ########.fr       */
+/*   Created: 2024/10/28 15:04:20 by didimitr          #+#    #+#             */
+/*   Updated: 2024/10/28 16:56:31 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
 #include "libft.h"
+#include <stdio.h>
 
-char *ft_substr(char const *s, unsigned int start,
-size_t len)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	char *substr;
-	size_t strlen;
-	
-	strlen = 0;
-	if(!s)
+	char	*s3;
+	size_t len1;
+	size_t len2;
+	size_t i;
+
+	if(!s1 || !s2)
 		return(NULL);
-	strlen = ft_strlen(s);
-	if(start >= strlen)
-	{	
-        substr = (char *)malloc(sizeof(char) * 1);
-        if (!substr)
-            return (NULL);
-        return (substr[0] = '\0', substr);
-    }
-	if(len > strlen - start)
-		len = strlen - start;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if(!substr)
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	i = ft_strlen(s1) + ft_strlen(s2) + 1;
+	s3 = malloc(i * sizeof(char));
+	if(!s3)
 		return(NULL);
-	ft_strlcpy(substr, s + start, len + 1);
-    return (substr);
+	ft_memcpy(s3, s1, len1);
+	ft_memcpy(s3 + len1, s2, len2);
+	return(s3[i - 1] = '\0', s3);
 }

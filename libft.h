@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adimik <adimik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 02:18:02 by adimik            #+#    #+#             */
-/*   Updated: 2024/10/27 20:17:55 by adimik           ###   ########.fr       */
+/*   Updated: 2024/10/28 17:16:25 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 char *ft_substr(char const *s, unsigned int start,
 size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
 
 #endif
