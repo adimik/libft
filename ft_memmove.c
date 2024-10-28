@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memmove(void *dest, const void *src, size_t n)
+#include <stddef.h>
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned const char	*s;
 	unsigned char		*d;
-	int					i;
+	size_t				i;
 
 	s = (unsigned const char *)src;
 	d = (unsigned char *)dest;

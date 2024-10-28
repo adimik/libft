@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *ptr, int value, size_t num)
+#include <stddef.h>
+
+void	*ft_memset(void *ptr, int value, size_t num)
 {
 	unsigned char	*p;
 	size_t			i;

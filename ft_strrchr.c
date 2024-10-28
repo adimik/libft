@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *str, int c)
+#include <stddef.h>
+
+char	*ft_strrchr(const char *str, int c)
 {
-	char	*i;
-	char	*last;
+	const char	*i;
+	const char	*last;
 
 	i = str;
 	last = NULL;
@@ -26,7 +28,7 @@ char	*strrchr(const char *str, int c)
 		i++;
 	}
 	if (last != NULL)
-		return (last);
+		return ((char *)last);
 	else
 		return (NULL);
 }

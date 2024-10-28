@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest_str, const void *src_str, size_t n)
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest_str, const void *src_str, size_t n)
 {
 	unsigned const char	*s;
 	unsigned char		*d;
-	int					i;
+	size_t				i;
 
 	i = 0;
 	s = src_str;

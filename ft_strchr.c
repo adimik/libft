@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *str, int c)
+#include <stddef.h>
+
+char	*ft_strchr(const char *str, int c)
 {
-	char	*p;
+	const char	*p;
 
 	p = str;
 	while (1)
