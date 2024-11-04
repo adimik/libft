@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
+/*   By: inyancat <inyancat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 02:09:46 by adimik            #+#    #+#             */
-/*   Updated: 2024/11/04 11:05:52 by didimitr         ###   ########.fr       */
+/*   Created  2016/11/11 16:47:32 by inyancat          #+#    #+#             */
+/*   Updated  2016/11/12 20:21:42 by inyancat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "utils.h"
+#include <stdarg.h>
+extern int g_log_fd;
 
-size_t	ft_strlen(const char *str)
+void error(int code, int a, const char *pattern, ...)
 {
-	size_t	i;
+	va_list	va;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	va_start(va, pattern);
+	(void)a;
+	vdprintf(g_log_fd, pattern, va);
+	dprintf(g_log_fd, "\n");
+	va_end(va);
+	exit(code);
 }
